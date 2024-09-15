@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h2, p, label {
+    color: green;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid green;
+    background-color: black;
+    color: green;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: green;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: lime;
+}
+
+#prediction-result.red {
+    color: red;
+    font-size: 24px;
+}
+
+#prediction-result.green {
+    color: green;
+    font-size: 24px;
+}
+
+#loading {
+    color: lime;
+    font-size: 20px;
+}
