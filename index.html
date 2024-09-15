@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="app-name">Select App For Prediction</div>
+
+        <input type="text" id="app-input" placeholder="Enter app name (91club, tc lottery)" />
+        <button id="app-submit" onclick="setAppName()">Submit</button>
+        
+        <div id="prediction-container" style="display: none;">
+            <h2 id="prediction-title">App Hack</h2>
+            <p id="server-status">Server Running...</p>
+
+            <div class="input-section">
+                <label for="period-input">Enter Period Number (example: 39)</label>
+                <input type="number" id="period-input" placeholder="Enter period number">
+            </div>
+            
+            <button id="start-btn" onclick="predict()">Start</button>
+
+            <div id="loading" style="display: none;">Loading...</div>
+
+            <div id="prediction-result" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
