@@ -9,12 +9,11 @@ function setAppName() {
     const appTitle = document.getElementById('prediction-title');
     const appNameDisplay = document.getElementById('app-name');
     
-    if (appName === '91club') {
-        appTitle.textContent = '91club Hack';
-    } else if (appName === 'tc lottery') {
-        appTitle.textContent = 'TC Lottery Hack';
+    // Set app title dynamically based on user input
+    if (appName !== '') {
+        appTitle.textContent = appName + ' Hack';
     } else {
-        alert('Invalid app name. Please enter either 91club or tc lottery.');
+        alert('Please enter a valid app name.');
         return;
     }
 
@@ -31,6 +30,11 @@ function predict() {
         return;
     }
 
+    // Clear the previous prediction result
+    const resultDiv = document.getElementById('prediction-result');
+    resultDiv.style.display = 'none';
+    resultDiv.textContent = '';
+
     // Show loading
     document.getElementById('loading').style.display = 'block';
 
@@ -42,7 +46,7 @@ function predict() {
         const index = periodNumber % 21;
         const result = pattern[index];
 
-        const resultDiv = document.getElementById('prediction-result');
+        // Display new prediction
         resultDiv.textContent = result;
         resultDiv.style.display = 'block';
 
